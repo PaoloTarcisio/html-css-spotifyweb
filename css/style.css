@@ -2,11 +2,12 @@
     RESET
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 img {
@@ -14,3 +15,207 @@ img {
     display: block;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul , ol {
+    list-style: none;
+}
+
+/* GENERAL */
+
+#principal {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+aside {
+    width: 300px;
+}
+
+main {
+    width: 100%;
+}
+
+footer {
+    height: 100px;
+}
+
+/* 
+        ASIDE
+*/
+
+aside {
+    position: relative;
+}
+
+aside * {
+    padding: 5px;
+    color: grey;
+
+}
+
+aside .logo {
+    width: 80%;
+}
+
+aside .landing-pages i{
+    font-size: 2rem;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+aside section #playlist h3,
+aside #aside-footer div:last-child a{
+    color: white;
+}
+
+aside #aside-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+aside #aside-footer div:first-child {
+    border-bottom: 1px solid gray;
+}
+
+aside #aside-footer div:last-child {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* 
+        MAIN
+*/
+
+/* 
+    upgrade
+*/
+
+#upgrade {
+    width: 100%;
+    height: 80px;
+    opacity: .8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#upgrade-button a {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.recently-palyed {
+    color: white;
+}
+
+/* 
+    menu
+*/
+
+.menu {
+    margin: 20px auto;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li a {
+    margin: 0 10px;
+    font-size: .9em;
+}
+
+/* 
+    card
+*/
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.card {
+    width: calc(90% / 6);
+    text-align: center;
+}
+
+.card * {
+    margin-bottom: 10px;
+}
+
+.card div p {
+    color: gray;
+    font-size: .8em;
+}
+
+.user-suggest-card {
+    display: flex;
+}
+
+.user-suggest-card .card {
+    margin-right: 20px;
+}
+
+
+/* 
+        FOOTER
+*/
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.footer-container #footer-left {
+    width: 25%;
+    display: flex;
+}
+
+.footer-container #footer-left .info-song {
+    display: flex;
+}
+
+
+
+/* DEBUG */
+
+.debug aside {
+    background-color: cadetblue;
+}
+
+.debug main {
+    background-color: lightseagreen;
+    border: 3px dashed red;
+}
+
+.debug footer {
+    background-color: pink;
+}
+
+.card {
+    border: 1px dashed red;
+}
+
+.debug #upgrade {
+    background-color: gray;
+}
+
+.debug #upgrade-button {
+    background-color: crimson;
+}
+
+.debug #upgrade-button a {
+    vertical-align: middle;
+}
