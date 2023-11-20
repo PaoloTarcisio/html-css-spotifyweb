@@ -32,10 +32,12 @@ ul , ol {
 
 aside {
     width: 300px;
+    position: relative;
 }
 
 main {
     width: 100%;
+    overflow: auto;
 }
 
 footer {
@@ -46,14 +48,9 @@ footer {
         ASIDE
 */
 
-aside {
-    position: relative;
-}
-
 aside * {
     padding: 5px;
     color: grey;
-
 }
 
 aside .logo {
@@ -90,6 +87,10 @@ aside #aside-footer div:last-child {
         MAIN
 */
 
+main section:not(:first-child) {
+    margin-bottom: 50px;
+}
+
 /* 
     upgrade
 */
@@ -101,6 +102,8 @@ aside #aside-footer div:last-child {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 #upgrade-button a {
@@ -110,9 +113,7 @@ aside #aside-footer div:last-child {
     border-radius: 20px;
 }
 
-.recently-palyed {
-    color: white;
-}
+
 
 /* 
     menu
@@ -132,6 +133,8 @@ aside #aside-footer div:last-child {
     margin: 0 10px;
     font-size: .9em;
 }
+
+
 
 /* 
     card
@@ -158,12 +161,18 @@ aside #aside-footer div:last-child {
     font-size: .8em;
 }
 
-.user-suggest-card {
+.user-suggest-card,
+.popular-card {
     display: flex;
 }
 
-.user-suggest-card .card {
+.user-suggest-card .card,
+.popular-card .card {
     margin-right: 20px;
+}
+
+.popular-card .card img {
+    border-radius: 1000px;
 }
 
 
@@ -175,19 +184,92 @@ aside #aside-footer div:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
+}
+
+.footer-container > * {
+    width: calc(90% / 3);
 }
 
 .footer-container #footer-left {
-    width: 25%;
+    width: 300px;
     display: flex;
+    justify-content: space-around;
 }
 
 .footer-container #footer-left .info-song {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container #footer-left #info-song-img {
+    width: 30%;
+    padding: 13px;
+}
+
+.footer-container #footer-left #info-song-img img{
+    width: 100%;
 }
 
 
+/* footer center */
+
+.controls {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.controls ul{
+    display: flex;
+    align-items: center;
+}
+
+.controls .fa-regular{
+    font-size: 2rem;
+}
+
+.controls ul li a {
+    padding: 10px;
+}
+
+.song-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-bar > * {
+    margin: auto 6px;
+}
+
+.song-bar .song-time {
+    font-size: .7rem;
+}
+
+.bar-progress {
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    border-radius: 20px;
+}
+
+
+/* footer right */
+
+#footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#footer-right > * {
+    margin: 10px;
+}
+
+#footer-right .bar-progress {
+    width: 30%;
+}
 
 /* DEBUG */
 
@@ -204,7 +286,7 @@ aside #aside-footer div:last-child {
     background-color: pink;
 }
 
-.card {
+.debug .card {
     border: 1px dashed red;
 }
 
